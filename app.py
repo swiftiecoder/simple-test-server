@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 # Initialize MongoDB connection
 mongo_client = MongoClient(os.getenv('MONGO_URI'))
-db = mongo_client[os.getenv('langchain-db')]  # Replace with your database name
+db = mongo_client['langchain-db']  # Replace with your database name
 collection = db['traces']  # Replace with your collection name
 
 # Variable to store the payload of the last POST request
